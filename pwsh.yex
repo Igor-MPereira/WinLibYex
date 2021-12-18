@@ -1,0 +1,8 @@
+let partial_pwsh = system("pwsh")
+
+let has_pwsh = :ok == partial_pwsh(["-v"])[0]
+
+let pwsh command args = 
+  if has_pwsh 
+  then partial_pwsh("-c" :: command :: args) 
+  else err("pwsh not found")

@@ -1,0 +1,8 @@
+let partial_cmd = system("cmd")
+
+let has_cmd = :ok == partial_cmd(["-v"])[0]
+
+let cmd command args = 
+  if has_cmd
+  then partial_cmd("/c" :: command :: args)
+  else err("cmd not found")
