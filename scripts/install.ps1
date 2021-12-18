@@ -4,7 +4,6 @@ $OutPath = "./winlib"
 New-Item "$($OutPath)" -ItemType Directory -ea 0
 Invoke-WebRequest "$($RepoPath)/pwsh.yex" -OutFile "$($OutPath)/pwsh.yex"
 Invoke-WebRequest "$($RepoPath)/cmd.yex" -OutFile "$($OutPath)/cmd.yex"
-Invoke-WebRequest "$($RepoPath)/winsystem.yex" -OutFile "$($OutPath)/winsystem.yex"
 
 
 Remove-Variable -Name RepoPath
