@@ -1,9 +1,0 @@
-open './cmd.yex'
-open './pwsh.yex'
-
-let winsystem = 
-  if has_pwsh
-  then pwsh
-  else if has_cmd
-  then cmd
-  else err("no windows default shell found")

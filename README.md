@@ -17,3 +17,11 @@ let _ =
   pwsh("echo", ["Hello WinLib Yex!"])
   |> puts
 ```
+
+## Exports
+
+#### `pwsh.yex`
+
+|  Name  |                               Type                             |                        Description                      |
+|--------|----------------------------------------------------------------|---------------------------------------------------------|
+| `pwsh` | `fn(cmd: String, args: Vec<String>) -> Result<String, String>` | Executes a command in PowerShell and returns the output |
