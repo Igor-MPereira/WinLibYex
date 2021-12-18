@@ -22,6 +22,16 @@ let _ =
 
 #### `pwsh.yex`
 
-|  Name  |                               Type                             |                        Description                      |
-|--------|----------------------------------------------------------------|---------------------------------------------------------|
-| `pwsh` | `fn(cmd: String, args: Vec<String>) -> Result<String, String>` | Executes a command in PowerShell and returns the output |
+|      Name      |                               Type                             |                        Description                                    |
+|----------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
+|     `pwsh`     | `fn(cmd: String, args: Vec<String>) -> Result<String, String>` | Executes a command in `PowerShell` and returns the output             |
+|   `has_pwsh`   | `bool`                                                         | True if `PowerShell` is installed, False otherwise                    |
+| `partial_pwsh` | `fn(args: Vec<String>) -> Result<String, String>`              | Executes `PowerShell` with the given arguments and returns the output |
+
+#### `cmd.yex`
+
+|    Name      |                               Type                             |                        Description                              |
+|--------------|----------------------------------------------------------------|-----------------------------------------------------------------|
+|     `cmd`     | `fn(cmd: String, args: Vec<String>) -> Result<String, String>` | Executes a command in `cmd` and returns the output             |
+|   `has_cmd`   | `bool`                                                         | True if `cmd` is installed, False otherwise                    |
+| `partial_cmd` | `fn(args: Vec<String>) -> Result<String, String>`              | Executes `cmd` with the given arguments and returns the output |
